@@ -1,3 +1,11 @@
+@import '../../../assets/styles/main.scss';
+$start-secondBreakpoint: 561px;
+
 :host {
     width: 100%;
+    @include media($start-secondBreakpoint) {
+        & {
+            width: auto;
+        }
+    }
 }

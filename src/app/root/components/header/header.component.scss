@@ -1,4 +1,8 @@
 @import '../../../../assets/styles/utils/function';
+@import '../../../../assets/styles/main.scss';
+
+$start-firstBreakpoint: 915px;
+$start-secondBreakpoint: 561px;
 
 
 .wrapper {
@@ -6,10 +10,30 @@
     background-size: cover;
     width: 100%;
     height: 85%;
+
+    @include media($start-secondBreakpoint) {
+        & {
+            height: 100%;
+            background-size: contain;
+        }
+    }
 }
 
 .header {
     margin: 0 20% 0 20%;
+
+    @include media($start-firstBreakpoint) {
+        & {
+             margin: 0 10% 0 10%;
+        }
+    }
+
+    @include media($start-secondBreakpoint) {
+        & {
+             margin: 0 3% 0 3%;
+        }
+    }
+
     ul {
         list-style: none;
         padding-top: 20px;
@@ -18,6 +42,16 @@
             text-transform: uppercase;
             padding: 15px;
             cursor: pointer;
+            @include media($start-firstBreakpoint) {
+                & {
+                    font-size: 13px;
+                }
+            }
+            @include media($start-secondBreakpoint) {
+                & {
+                    font-size: 12px;
+                }
+            }
         }
 
         span {
@@ -26,6 +60,12 @@
             width: 160px;
             height: 50px;
             margin-right: 20px;
+
+            @include media($start-firstBreakpoint) {
+                & {
+                    width: 130px;
+                }
+            } 
         }
     }
 }
@@ -37,17 +77,52 @@
     h1 {
         text-transform: uppercase;
         font-weight: 800;
+
+        @include media($start-firstBreakpoint) {
+            & {
+                font-size: 27px;
+            }
+        }
+        @include media($start-secondBreakpoint) {
+            & {
+                font-size: 23px;
+            }
+        } 
     }
     h5 {
         font-weight: 800;
         margin-top: 40px;
         margin-bottom: 20px;
+
+        @include media($start-firstBreakpoint) {
+            & {
+                font-size: 18px;
+            }
+        }
+
+        @include media($start-secondBreakpoint) {
+            & {
+                font-size: 15px;
+            }
+        } 
     }
     button {
         color: white;
         text-transform: uppercase;
         background-color: #ff6633;
         border-bottom: 3px solid #e63900;
+
+        @include media($start-firstBreakpoint) {
+            & {
+                font-size: 15px;
+            }
+        }
+
+        @include media($start-secondBreakpoint) {
+            & {
+                font-size: 13px;
+            }
+        } 
     }
     p {
         font-size: 18px;
