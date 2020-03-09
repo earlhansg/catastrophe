@@ -1,3 +1,7 @@
-@function svg($name) {
-    @return url('/assets/images/#{$name}.svg');
+@function jpg($name) {
+    @return url('/assets/images/#{$name}.jpg');
+}
+
+@function png($name) {
+    @return url('/assets/images/#{$name}.png');
 }
