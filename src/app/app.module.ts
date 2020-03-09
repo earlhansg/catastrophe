@@ -7,6 +7,7 @@ import { HeaderComponent } from './root/components/header/header.component';
 import { HeroesComponent } from './root/components/heroes/heroes.component';
 import { HallComponent } from './root/components/hall/hall.component';
 import { AdoptingComponent } from './root/components/adopting/adopting.component';
+import { AppointmentComponent } from './root/components/appointment/appointment.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -17,7 +18,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HeaderComponent,
     HeroesComponent,
     HallComponent,
-    AdoptingComponent
+    AdoptingComponent,
+    AppointmentComponent
   ],
   imports: [
     BrowserModule,
