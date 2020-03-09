@@ -1,0 +1,29 @@
+.heroes {
+    margin-top: 3%;
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+    height: 85%;
+    text-align: center;
+    h1 {
+        color: #ff6633;
+        font-size: 48px;
+        font-weight: 800;
+    }
+    
+    &__secondary-img {
+        margin-top: 50px;
+        h5 {
+            text-transform: uppercase;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        img {
+            width: 200px;
+            height: 180px;
+        }
+        p {
+            font-size: 13px;
+        }
+    }
+}
