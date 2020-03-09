@@ -1,5 +1,5 @@
-import { Component, OnInit, OnDestroy, Pipe, PipeTransform } from '@angular/core';
-import { Observable, Subscription, interval, timer  } from 'rxjs';
+import { Component, Pipe, PipeTransform } from '@angular/core';
+import { timer  } from 'rxjs';
 import { map, take } from 'rxjs/operators';
 
 @Component({
@@ -9,7 +9,7 @@ import { map, take } from 'rxjs/operators';
 })
 export class HeaderComponent {
   countDown;
-  counter = 14400;
+  counter = 16200;
   tick = 1000;
 
   constructor() {
@@ -20,7 +20,6 @@ export class HeaderComponent {
     );
   }
 
-  ngOnInit() {}
 }
 
 
@@ -30,7 +29,15 @@ export class HeaderComponent {
 export class FormatTimePipe implements PipeTransform {
 
   transform(value: number): string {
-    const minutes: number = Math.floor(value / 60);
-    return ('00' + minutes).slice(-2) + ':' + ('00' + Math.floor(value - minutes * 60)).slice(-2);
-}
+    if (!isNaN(value)) {
+      const hours = Math.floor(value / 3600);
+      const minutes = Math.floor((value - (hours * 3600)) / 60);
+      const seconds = value - (hours * 3600) - (minutes * 60);
+      return ('0' + hours).substr(-2) + ' hours : ' 
+      + ('0' + minutes).substr(-2) 
+      + ' mins : ' + ('0' + seconds).substr(-2)
+      + ' left ';
+    }
+    return;
+  }
 }

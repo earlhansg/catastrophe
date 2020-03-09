@@ -7,7 +7,8 @@
         </ul>
         <div class="header-maintext">
             <h1>last chance <br> to adopt</h1>
-	        <h5>{{countDown | async | formatTime}}</h5>
+            <h5 *ngIf="!!counter; else timeUp">{{countDown | async | formatTime}}</h5>
+            <ng-template #timeUp>Time is up !</ng-template>
             <button class="btn">make appointment now</button>
         </div>
     </div>
