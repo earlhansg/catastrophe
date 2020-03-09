@@ -1,3 +1,10 @@
+
+
+@import '../../../../assets/styles/main.scss';
+
+$start-firstBreakpoint: 915px;
+$start-secondBreakpoint: 751px;
+
 .heroes {
     margin-top: 3%;
     margin-left: 20%;
@@ -5,10 +12,49 @@
     width: 60%;
     height: 85%;
     text-align: center;
+
+    @include media($start-firstBreakpoint) {
+        & {
+            width: 100%;
+            height: auto;
+            margin-left: 0%;
+            margin-right: 0%;
+            margin-top: 0%;
+        }
+    }
+
+    @include media($start-secondBreakpoint) {
+        & {
+            //  margin: 0 3% 0 3%;
+             width: 100%;
+        }
+    }
+
+
+    
     h1 {
         color: #ff6633;
         font-size: 48px;
         font-weight: 800;
+
+        @include media($start-firstBreakpoint) {
+            & {
+                font-size: 27px;
+            }
+        }
+        @include media($start-secondBreakpoint) {
+            & {
+                font-size: 23px;
+            }
+        } 
+    }
+
+    p {
+        @include media($start-firstBreakpoint) {
+            & {
+                font-size: 13px;
+            }
+        } 
     }
     
     &__secondary-img {
