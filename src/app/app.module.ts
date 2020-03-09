@@ -6,16 +6,22 @@ import { AppComponent } from './root/container/app.component';
 import { HeaderComponent } from './root/components/header/header.component';
 import { HeroesComponent } from './root/components/heroes/heroes.component';
 import { HallComponent } from './root/components/hall/hall.component';
+import { AdoptingComponent } from './root/components/adopting/adopting.component';
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HeroesComponent,
-    HallComponent
+    HallComponent,
+    AdoptingComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]

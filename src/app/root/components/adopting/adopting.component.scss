@@ -1,0 +1,52 @@
+@import '../../../../assets/styles/utils/function';
+
+.wrapper {
+    background: jpg(bg_adopting101) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 95%;
+    position: relative;
+}
+
+.adopting {
+    margin-left: 23%;
+    padding-top: 100px;
+    h5 {
+        font-size: 48px;
+        font-weight: 600;
+        color: white;
+        margin-left: 20px;
+    }
+    &__secondary {
+        margin-top: 15px;
+        font-size: 18px;
+        color: rgb(190, 181, 181);
+        margin-left: 20px;
+        padding-bottom: 15px;
+    }
+
+    button {
+        color: white;
+        text-transform: uppercase;
+        background-color: #ff6633;
+        border-bottom: 3px solid #e63900;
+        margin-top: 15px;
+        margin-left: 5px;
+    }
+}
+
+.p-header {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #f8a60e;
+    fa-icon {
+        color: rgb(92, 86, 86);
+    }
+}
+
+.p-secondary {
+    font-size: 12px;
+    margin-left: 20px;
+    color: whitesmoke;
+    line-height: 2;
+}
