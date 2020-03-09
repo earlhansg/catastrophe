@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './root/container/app.component';
-import { HeaderComponent } from './root/components/header/header.component';
+import { HeaderComponent, FormatTimePipe } from './root/components/header/header.component';
 import { HeroesComponent } from './root/components/heroes/heroes.component';
 import { HallComponent } from './root/components/hall/hall.component';
 import { AdoptingComponent } from './root/components/adopting/adopting.component';
@@ -21,7 +21,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HallComponent,
     AdoptingComponent,
     AppointmentComponent,
-    ExtraComponent
+    ExtraComponent,
+    FormatTimePipe
   ],
   imports: [
     BrowserModule,

@@ -7,7 +7,7 @@
         </ul>
         <div class="header-maintext">
             <h1>last chance <br> to adopt</h1>
-            <h5>4 hours 30 mins left</h5>
+	        <h5>{{countDown | async | formatTime}}</h5>
             <button class="btn">make appointment now</button>
         </div>
     </div>
